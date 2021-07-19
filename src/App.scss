@@ -9,11 +9,9 @@
 }
 
 .calculator {
-	position: absolute;
-	top: 20%;
-	left: 40%;
-	height: 300px;
 	width: 150px;
+	margin-left: 40%;
+	margin-top: 12%;
 }
 
 .input-box {
@@ -21,6 +19,5 @@
 }
 
 .buttons {
-	position: absolute;
-	top: 10%;
+	margin-top: 10%;
 }
