@@ -1,19 +1,21 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import './App.scss';
-import context from './core/context';
-import SampleService from './services/sample';
-import SimpleButton from './components/simpleButton';
+import Button from './components/Button';
+import InputBox from './components/InputBox';
 
-const App = () => {
-	useEffect(SampleService.sayHai, []);
+// eslint-disable-next-line no-magic-numbers
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const operators = ['+', '-', '*', '/', '%'];
 
-	return (
-		<div className="App">
-			<div>Count: { context.state.count }</div>
-			<div>{ SimpleButton() }</div>
-			<div>Refresh ID: { context.state.refreshID }</div>
+const App = () =>
+	<div className="App">
+		<div className="calculator">
+			<div>{ InputBox() }</div>
+			<div className="buttons">
+				<div>{ numbers.map(Button) }</div>
+				<div>{ operators.map(Button) }</div>
+			</div>
 		</div>
-	);
-};
+	</div>;
 
 export default App;

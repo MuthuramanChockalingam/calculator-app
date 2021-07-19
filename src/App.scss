@@ -3,5 +3,24 @@
 
 	button {
 		font-weight: bold;
+		width: 50px;
+		height: 25px;
 	}
+}
+
+.calculator {
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	height: 300px;
+	width: 150px;
+}
+
+.input-box {
+	width: 120px;
+}
+
+.buttons {
+	position: absolute;
+	top: 10%;
 }
