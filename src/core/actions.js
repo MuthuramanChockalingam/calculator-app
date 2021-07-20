@@ -3,8 +3,13 @@ const setInput = ({ state, data }) => ({
 	input: (state.input * 10) + data,
 });
 
+const clearInput = () => ({
+	input: 0,
+});
+
 const actions = {
 	setInput,
+	clearInput,
 };
 
 export default actions;

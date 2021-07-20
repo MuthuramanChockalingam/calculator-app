@@ -1,6 +1,7 @@
 import { React } from 'react';
 import './App.scss';
 import Button from './components/Button';
+import ClearButton from './components/ClearButton';
 import InputBox from './components/InputBox';
 import context from './core/context';
 
@@ -20,7 +21,7 @@ const App = () => {
 				<div className="buttons">
 					<div>{ numbers.map(Button) }</div>
 					<div>{ operators.map(Button) }</div>
-					<div>{ clear.map(Button) }</div>
+					<div>{ clear.map(ClearButton) }</div>
 				</div>
 			</div>
 		</div>);
