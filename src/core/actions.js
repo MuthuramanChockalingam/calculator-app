@@ -1,10 +1,10 @@
 const setInput = ({ state, data }) => ({
 	// eslint-disable-next-line no-magic-numbers
-	input: (state.input * 10) + data,
+	display: (state.display * 10) + data,
 });
 
 const clearInput = () => ({
-	input: 0,
+	display: 0,
 });
 
 const actions = {

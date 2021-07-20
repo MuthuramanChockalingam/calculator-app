@@ -5,7 +5,7 @@ const InputBox = () =>
 	<input
 		className="input-box"
 		type="text"
-		value={ context.state.input }
+		value={ context.state.display }
 		onChange={ () => {} }
 	/>;
 

@@ -1,6 +1,7 @@
 
 const seed = {
-	input: 0,
+	display: 0,
+	operand: 0,
 };
 
 export default seed;
