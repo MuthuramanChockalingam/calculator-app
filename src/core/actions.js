@@ -7,9 +7,14 @@ const clearInput = () => ({
 	display: 0,
 });
 
+const setOperator = ({ data }) => ({
+	operator: data,
+});
+
 const actions = {
 	setInput,
 	clearInput,
+	setOperator,
 };
 
 export default actions;
