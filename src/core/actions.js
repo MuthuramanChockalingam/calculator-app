@@ -1,20 +1,36 @@
+import calculate from '../services/calculate.js';
+
+const ten = 10;
+
 const setInput = ({ state, data }) => ({
-	// eslint-disable-next-line no-magic-numbers
-	display: (state.display * 10) + data,
+	display: (state.display * ten) + data,
 });
 
 const clearInput = () => ({
 	display: 0,
+	operand: 0,
+	operator: '',
 });
 
 const setOperator = ({ data }) => ({
 	operator: data,
 });
 
+const switchData = ({ state }) => ({
+	operand: state.display,
+	display: 0,
+});
+
+const performOperation = ({ state }) => ({
+	display: calculate(state),
+});
+
 const actions = {
 	setInput,
 	clearInput,
 	setOperator,
+	switchData,
+	performOperation,
 };
 
 export default actions;
