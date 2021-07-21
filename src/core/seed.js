@@ -1,8 +1,8 @@
 
 const seed = {
-	display: 0,
+	display: null,
 	operand: 0,
-	operator: '',
+	operator: '+',
 };
 
 export default seed;

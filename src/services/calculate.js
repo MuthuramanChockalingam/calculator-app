@@ -3,6 +3,7 @@ const actions = {
 	'-': (operand, display) => operand - display,
 	'*': (operand, display) => operand * display,
 	'/': (operand, display) => operand / display,
+	'=': (dummy, display) => display,
 };
 
 const calculate = ({ display, operand, operator }) => {

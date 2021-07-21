@@ -8,8 +8,7 @@ const OperatorButton = (operator) =>
 			if(context.state.operator !== '')
 				context.actions.performOperation();
 			context.actions.setOperator(operator);
-			if(context.state.operand === 0)
-				context.actions.switchData();
+			context.actions.switchData();
 		} }
 	>
 		{ operator }
