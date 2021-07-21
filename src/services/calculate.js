@@ -1,16 +1,16 @@
 const actions = {
-	'+': (operand, display) => operand + display,
-	'-': (operand, display) => operand - display,
-	'*': (operand, display) => operand * display,
-	'/': (operand, display) => operand / display,
-	'=': (dummy, display) => display,
+	'+': (trailing, current) => trailing + current,
+	'-': (trailing, current) => trailing - current,
+	'*': (trailing, current) => trailing * current,
+	'/': (trailing, current) => trailing / current,
+	'=': (dummy, current) => current,
 };
 
-const calculate = ({ display, operand, operator }) => {
+const calculate = ({ current, trailing, operator }) => {
 	// eslint-disable-next-line no-console
-	console.log({ display, operand, operator });
+	console.log({ current, trailing, operator });
 
-	return actions[operator](operand, display);
+	return actions[operator](trailing, current);
 };
 
 // eslint-disable-next-line no-console

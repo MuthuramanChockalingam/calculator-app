@@ -1,7 +1,7 @@
 
 const seed = {
-	display: null,
-	operand: 0,
+	current: null,
+	trailing: 0,
 	operator: '+',
 };
 

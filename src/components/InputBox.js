@@ -3,9 +3,9 @@ import context from '../core/context';
 
 const InputBox = () =>
 	<div className="input-box">
-		{ context.state.display === null
-			? context.state.operand
-			: context.state.display }
+		{ context.state.current === null
+			? context.state.trailing
+			: context.state.current }
 	</div>;
 
 export default InputBox;

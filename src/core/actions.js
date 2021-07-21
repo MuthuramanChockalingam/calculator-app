@@ -3,7 +3,7 @@ import calculate from '../services/calculate.js';
 const ten = 10;
 
 const setInput = ({ state, data }) => ({
-	display: ((state.display || 0) * ten) + data,
+	current: ((state.current || 0) * ten) + data,
 });
 
 const clearInput = ({ seed }) => seed;
@@ -13,12 +13,12 @@ const setOperator = ({ data }) => ({
 });
 
 const switchData = ({ state }) => ({
-	operand: state.display,
-	display: null,
+	trailing: state.current,
+	current: null,
 });
 
 const performOperation = ({ state }) => ({
-	display: calculate(state),
+	current: calculate(state),
 });
 
 const actions = {
